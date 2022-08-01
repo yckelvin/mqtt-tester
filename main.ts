@@ -10,15 +10,18 @@ function publish (num: number, text: string) {
 input.onButtonPressed(Button.AB, function () {
     control.reset()
 })
+basic.showNumber(0)
 let wifi_name = "izowifi"
 let password = "izo1234@"
 let iot_id = "lmZB9bXGR"
 let iot_pwd = "liWfrxXMgz"
 let topic_0 = "qwPmNL37g"
+basic.showNumber(1)
 microIoT.microIoT_initDisplay()
 microIoT.microIoT_showUserText(0, "INIT DEVICE")
 microIoT.microIoT_showUserText(1, "SETUP WIFI")
 microIoT.microIoT_WIFI(wifi_name, password)
+basic.showNumber(2)
 microIoT.microIoT_showUserText(2, "DEFINE MQTT")
 microIoT.microIoT_MQTT(
 iot_id,
@@ -26,6 +29,8 @@ iot_pwd,
 topic_0,
 microIoT.SERVERS.English
 )
+basic.showNumber(3)
 publish(4, convertToText(randint(0, 20)))
 publish(5, convertToText(randint(0, 20)))
 publish(6, convertToText(randint(0, 20)))
+basic.showNumber(4)
